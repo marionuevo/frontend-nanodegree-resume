@@ -1,41 +1,103 @@
 <!DOCTYPE html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<title>Resume</title>
-	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+/*		body { 
+			background: url('https://placekitten.com/g/800/800') no-repeat center center fixed; !heeeavy
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}*/
+		#map {
+			display: block;
+			height: 100%;
+			margin: 0;
+		}
+		#mapDiv {
+			height: 400px;
+			width: 100%;
+			padding-bottom: 5%;
+		}
+		.title-box {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+		.content-box {
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			margin-bottom: 20px;
+		}
+		.col-md-12 {
+			white-space: nowrap;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+		span.work-entry, span.project-entry, span.education-entry{
+			padding: 10px;
+			display: inline-block;
+		}
+	</style>
 	<script src="js/jQuery.js"></script>
 	<script src="js/helper.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-	<meta name="viewport" content="width=device-width">
+	<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+	
 </head>
-<body unresolved>
-	<div id="main">
-		<div id="header" class="center-content clearfix">
-			<ul id="topContacts" class='flex-box'></ul>
+<body>
+	<div id="main" class="container">
+
+		<div class="row">
+			<div class="col-md-9">
+				<div id="header1" class="page-header">
+				</div>
+				<div id="header2">
+					<ul id="topContacts" class="list-inline"></ul>
+				</div>
+			</div>
+
+			<div id="header-img" class="col-md-3">
+			</div>
 		</div>
-		<div style='clear: both;'></div>
-		<div id="workExperience" class='gray'>
-			<h2>Work Experience</h2>
-		</div>
-		<div id="projects">
-			<h2>Projects</h2>
-		</div>
-		<div id="education" class='gray'>
-			<h2>Education</h2>
+		
+		<div class="row">
+			<div class="title-box col-md-12">
+				<h2>Work Experience</h2>
+			</div>
+
+			<div id="workExperience" class="content-box col-md-12">
+			</div>
+			
+			<div class="title-box col-md-12">
+				<h2>Projects</h2>
+			</div>
+			<div id="projects" class="content-box col-md-12">
+			</div>
+
+			<div id="education" class="title-box col-md-12">
+				<h2>Education</h2>
+			</div>
+			<div id="education" class="content-box col-md-12">
+			</div>
 		</div>
 		<div id="mapDiv">
 			<h2>Where I've Lived and Worked</h2>
 		</div>
-		<div id="letsConnect" class='dark-gray'>
-			<h2 class='orange center-text'>Let's Connect</h2>
-				<ul id="footerContacts" class="flex-box">
+		<div id="letsConnect" class="">
+			<h2 class="">Let's Connect</h2>
+				<ul id="footerContacts" class="">
 			</ul>
 		</div>
 	</div>
 	<script src="js/resumeBuilder.js"></script>
 
 	<script type="text/javascript">
-		if(document.getElementsByClassName('flex-item').length === 0) {
+		/*if(document.getElementsByClassName('flex-item').length === 0) {
 			document.getElementById('topContacts').style.display = 'none';
 		}
 		if(document.getElementsByTagName('h1').length === 0) {
@@ -55,7 +117,7 @@
 		}
 		if(document.getElementById('map') === null) {
 			document.getElementById('mapDiv').style.display = 'none';
-		}
+		}*/
 	</script>
 </body>
 </html>

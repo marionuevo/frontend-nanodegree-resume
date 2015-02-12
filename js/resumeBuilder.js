@@ -13,6 +13,27 @@ var work = {
 			"location" : "Canary Islands",
 			"dates" : "2005-2007",
 			"description" : "WWW design and development. HTML, PHP, ActionScript"
+		},
+		{
+			"employer" : "Freelance",
+			"title" : "Graphic Designer",
+			"location" : "Canary Islands",
+			"dates" : "2005-2007",
+			"description" : "WWW design and development. HTML, PHP, ActionScript"
+		},
+		{
+			"employer" : "Freelance",
+			"title" : "Graphic Designer",
+			"location" : "Canary Islands",
+			"dates" : "2005-2007",
+			"description" : "WWW design and development. HTML, PHP, ActionScript"
+		},
+		{
+			"employer" : "Freelance",
+			"title" : "Graphic Designer",
+			"location" : "Canary Islands",
+			"dates" : "2005-2007",
+			"description" : "WWW design and development. HTML, PHP, ActionScript"
 		}
 	],
 	display : function () {
@@ -60,17 +81,17 @@ var bio = {
 	"role" : "Web Developer",
 	"welcomeMessage" : "Welcome to my resume page",
 	"contacts" : {
-			"mobile" : "+34629451265",
+			"mobile" : "+34 629 451 265",
 			"email" : "marionuevo@gmail.com",
 			"github" : "marionuevo",
 			"twitter" : "@marionuevo",
-			"location" : "Adeje"
+			"location" : "Canary Islands | Spain"
 	},
 	"skills" : ["awesomeness","progamming", "JS"],
-	"biopic" : "http://placehold.it/150x150",
+	"biopic" : "http://placehold.it/225x225",
 	display : function () {
-		$("#header").prepend(HTMLheaderRole.replace("%data%",bio.role));
-		$("#header").prepend(HTMLheaderName.replace("%data%",bio.name));
+		$("#header1").prepend(HTMLheaderName.replace("%data%",bio.name));
+		$("#header1 > h1").append(HTMLheaderRole.replace("%data%",bio.role));
 		
 		$("#topContacts").append(HTMLmobile.replace("%data%",bio.contacts.mobile));
 		$("#topContacts").append(HTMLemail.replace("%data%",bio.contacts.email));
@@ -78,10 +99,10 @@ var bio = {
 		$("#topContacts").append(HTMLgithub.replace("%data%",bio.contacts.github));
 		$("#topContacts").append(HTMLlocation.replace("%data%",bio.contacts.location));
 
-		$("#header").append(HTMLbioPic.replace("%data%",bio.biopic));
+		$("#header-img").append(HTMLbioPic.replace("%data%",bio.biopic));
 
 		if (bio.skills.length>0) {
-			$("#header").append(HTMLskillsStart);
+			$("#header2").append(HTMLskillsStart);
 			for (item in bio.skills) {
 				var formattedSkill = HTMLskills.replace("%data%", bio.skills[item]);
 				$("#skills").append(formattedSkill);
@@ -124,9 +145,6 @@ var education = {
 	}
 };
 
-//$("#main").append(work["position"]);
-
-
 bio.display();
 work.display();
 projects.display();
@@ -146,8 +164,11 @@ function inName(fullName) {
 	return firstLetter + name + " " + surName;
 }
 
-$("#main").append(internationalizeButton);
+//$("#main").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
+
+
+
 
 
